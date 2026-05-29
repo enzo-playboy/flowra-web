@@ -266,7 +266,7 @@ export default function CostReduction() {
           <div className="flex items-center justify-center gap-4 mb-6">
             <div className="h-px w-12 bg-gradient-to-r from-transparent to-white/20" />
             <span className="font-mono text-xs uppercase tracking-widest text-white/40">
-              06 / Investimento
+              07 / Investimento
             </span>
             <div className="h-px w-12 bg-gradient-to-l from-transparent to-white/20" />
           </div>

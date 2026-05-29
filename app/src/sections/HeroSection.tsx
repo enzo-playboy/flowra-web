@@ -126,16 +126,18 @@ export default function HeroSection() {
         <div ref={ctaRef} className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button 
             onClick={() => document.getElementById('implementation')?.scrollIntoView({ behavior: 'smooth' })}
+            aria-label="Comece agora - ver implementação"
             className="group flex items-center gap-3 px-8 py-4 rounded-full border border-white/30 bg-transparent text-white font-body text-sm uppercase tracking-wider hover:bg-white hover:text-black transition-all duration-500 cursor-pointer"
           >
             Comece Agora
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
           </button>
           <button 
             onClick={() => document.getElementById('manifesto')?.scrollIntoView({ behavior: 'smooth' })}
+            aria-label="Ver nossa história e manifesto"
             className="group flex items-center gap-3 px-8 py-4 rounded-full border border-white/10 bg-white/5 text-white/80 font-body text-sm uppercase tracking-wider hover:bg-white/10 transition-all duration-500 cursor-pointer"
           >
-            <Play className="w-4 h-4" />
+            <Play className="w-4 h-4" aria-hidden="true" />
             Ver Historia
           </button>
         </div>

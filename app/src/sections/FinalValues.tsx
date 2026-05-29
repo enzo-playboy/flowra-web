@@ -100,7 +100,7 @@ export default function FinalValues() {
           <div className="flex items-center justify-center gap-4 mb-6">
             <div className="h-px w-12 bg-gradient-to-r from-transparent to-white/20" />
             <span className="font-mono text-xs uppercase tracking-widest text-white/40">
-              07 / Nossos Valores
+              08 / Nossos Valores
             </span>
             <div className="h-px w-12 bg-gradient-to-l from-transparent to-white/20" />
           </div>
@@ -145,9 +145,13 @@ export default function FinalValues() {
           <p className="font-body text-white/40 text-lg mb-8">
             Pronto para transformar seu negocio?
           </p>
-          <button className="group inline-flex items-center gap-3 px-10 py-5 rounded-full bg-white text-black font-body text-sm uppercase tracking-wider hover:bg-white/90 transition-all duration-300">
+          <button 
+            onClick={() => document.getElementById('implementation')?.scrollIntoView({ behavior: 'smooth' })}
+            aria-label="Comece sua jornada de transformação"
+            className="group inline-flex items-center gap-3 px-10 py-5 rounded-full bg-white text-black font-body text-sm uppercase tracking-wider hover:bg-white/90 transition-all duration-300 cursor-pointer"
+          >
             Comece sua jornada
-            <Zap className="w-4 h-4 group-hover:scale-110 transition-transform" />
+            <Zap className="w-4 h-4 group-hover:scale-110 transition-transform" aria-hidden="true" />
           </button>
         </div>
       </div>

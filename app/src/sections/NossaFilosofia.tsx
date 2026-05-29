@@ -60,9 +60,9 @@ export default function NossaFilosofia() {
       <div className="absolute left-[10vw] w-[50vw] h-[50vw] rounded-full bg-white/[0.01] blur-[150px] pointer-events-none z-0" />
 
       {/* Section label */}
-      <div className="absolute top-12 left-12 md:left-24 lg:left-36" style={{ zIndex: 30 }}>
+      <div className="absolute top-12 left-1/2 -translate-x-1/2" style={{ zIndex: 30 }}>
         <span className="font-mono text-xs uppercase tracking-widest text-white/40">
-          05.5 / Nossa Filosofia
+          06 / Nossa Filosofia
         </span>
       </div>
 
@@ -98,9 +98,10 @@ export default function NossaFilosofia() {
             )
           }
           className="group inline-flex items-center gap-3 px-8 py-4 rounded-full border border-white/20 bg-white/5 text-white/80 font-body text-sm uppercase tracking-wider hover:bg-white/10 transition-all duration-500 cursor-pointer"
+          aria-label="Solicitar proposta exclusiva via WhatsApp"
         >
           Quero uma proposta exclusiva
-          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
         </button>
       </div>
 
