@@ -9,6 +9,7 @@ import KineticValues from './sections/KineticValues';
 import HorizontalValues from './sections/HorizontalValues';
 import ImplementationSection from './sections/ImplementationSection';
 import AgentProducts from './sections/AgentProducts';
+import NossaFilosofia from './sections/NossaFilosofia';
 import CostReduction from './sections/CostReduction';
 import FinalValues from './sections/FinalValues';
 import Footer from './sections/Footer';
@@ -59,6 +60,7 @@ function App() {
         <HorizontalValues />
         <ImplementationSection />
         <AgentProducts />
+        <NossaFilosofia />
         <CostReduction />
         <FinalValues />
         <Footer />

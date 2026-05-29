@@ -1,12 +1,13 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ArrowRight } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const manifestoText = `O que nos move. Voce nao abriu sua empresa para virar refem de telas. A pior dor de cabeca para um empresario e ir dormir sabendo que o WhatsApp, o Instagram e o site estao abandonados, com clientes querendo comprar e ninguem para responder. E dinheiro escorrendo pelo ralo toda noite. Na Flowra, nos devolvemos o seu tempo perdido. Criamos agentes de IA e sites de alta conversao que atendem, qualificam e vendem com a mesma empatia que um humano faria — 24 horas por dia. Chega de perder noites de sono e vendas valiosas. Deixe a Flowra rodando no piloto automatico e foque em crescer.`;
+const filosofiaText = `Nossa Filosofia. Nao acreditamos em pacotes prontos. Acreditamos em negocios unicos. Cada empresa que atendemos carrega uma historia, uma dor e uma ambicao diferentes. Nosso trabalho e sentar com voce, ouvir com atencao e desenhar uma solucao que so o seu negocio precisa. Nao entregamos tecnologia. Entregamos clareza, tempo de volta e a certeza de que voce nao esta perdendo mais vendas. A proposta chega em ate 48 horas. Feita sob medida. Como tudo que fazemos.`;
 
-export default function KineticValues() {
+export default function NossaFilosofia() {
   const sectionRef = useRef<HTMLElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -18,19 +19,17 @@ export default function KineticValues() {
     const wordsElements = container.querySelectorAll('.kinetic-word');
     if (wordsElements.length === 0) return;
 
-    // Create a GSAP timeline with pinning for the entire section
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: section,
         start: 'top top',
-        end: '+=185%', // Pins for a comfortable scroll length
+        end: '+=120%',
         pin: true,
-        scrub: 1, // Smoother scrub for "velvety" feel
+        scrub: 1,
         invalidateOnRefresh: true,
       },
     });
 
-    // Stagger the word highlight with transition of opacity, color, and blur
     timeline.to(wordsElements, {
       opacity: 1,
       color: '#ffffff',
@@ -39,7 +38,6 @@ export default function KineticValues() {
       ease: 'none',
     });
 
-    // Refresh ScrollTrigger to ensure correct placement of subsequent components
     ScrollTrigger.refresh();
 
     return () => {
@@ -50,7 +48,7 @@ export default function KineticValues() {
     };
   }, []);
 
-  const words = manifestoText.split(' ');
+  const words = filosofiaText.split(' ');
 
   return (
     <section
@@ -64,14 +62,14 @@ export default function KineticValues() {
       {/* Section label */}
       <div className="absolute top-12 left-12 md:left-24 lg:left-36" style={{ zIndex: 30 }}>
         <span className="font-mono text-xs uppercase tracking-widest text-white/40">
-          02 / Principios
+          05.5 / Nossa Filosofia
         </span>
       </div>
 
       {/* Kinetic text container */}
       <div
         ref={containerRef}
-        className="kinetic-text w-full max-w-5xl text-left font-display font-medium text-2xl md:text-3xl lg:text-[2vw] leading-[1.6] tracking-tight relative z-10"
+        className="kinetic-text w-full max-w-4xl text-left font-display font-medium text-2xl md:text-3xl lg:text-[2vw] leading-[1.6] tracking-tight relative z-10"
         style={{ '--width': '100%' } as React.CSSProperties}
       >
         {words.map((word, index) => (
@@ -88,6 +86,22 @@ export default function KineticValues() {
             {word}
           </span>
         ))}
+      </div>
+
+      {/* CTA */}
+      <div className="absolute bottom-24 left-12 md:left-24 lg:left-36 z-30">
+        <button
+          onClick={() =>
+            window.open(
+              'https://wa.me/55SEUNUMERO?text=Olá!%20Vi%20a%20seção%20Nossa%20Filosofia%20e%20quero%20uma%20proposta%20exclusiva%20para%20o%20meu%20negócio.',
+              '_blank'
+            )
+          }
+          className="group inline-flex items-center gap-3 px-8 py-4 rounded-full border border-white/20 bg-white/5 text-white/80 font-body text-sm uppercase tracking-wider hover:bg-white/10 transition-all duration-500 cursor-pointer"
+        >
+          Quero uma proposta exclusiva
+          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+        </button>
       </div>
 
       {/* Modern gradient overlay for depth */}

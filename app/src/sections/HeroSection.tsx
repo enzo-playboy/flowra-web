@@ -118,8 +118,8 @@ export default function HeroSection() {
           ref={subtitleRef}
           className="font-body text-white/50 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Agentes inteligentes que automatizam seu atendimento, vendas e
-          operacao. Deixe a tecnologia trabalhar por voce.
+          Ative uma frota de Agentes de IA integrados ao seu sistema para
+          resolver chamados e fechar vendas de forma automatica
         </p>
 
         {/* CTAs */}

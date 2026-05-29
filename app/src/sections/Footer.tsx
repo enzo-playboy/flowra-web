@@ -56,7 +56,7 @@ export default function Footer() {
               Links
             </h4>
             <ul className="space-y-3">
-              {['Agentes', 'Implementacao', 'Custos', 'Valores', 'Contato'].map(
+              {['Ecosistema', 'Implementacao', 'Custos', 'Valores', 'Contato'].map(
                 (link) => (
                   <li key={link}>
                     <a

@@ -87,7 +87,7 @@ export default function HorizontalValues() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="horizontal-section" style={{ zIndex: 20 }}>
+    <section ref={sectionRef} id="valores" className="horizontal-section" style={{ zIndex: 20 }}>
       {/* Section header */}
       <div className="absolute top-8 left-8 flex items-center gap-4" style={{ zIndex: 30 }}>
         <span className="font-mono text-xs uppercase tracking-widest text-white/40">
